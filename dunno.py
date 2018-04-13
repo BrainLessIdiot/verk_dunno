@@ -1,4 +1,5 @@
 from bottle import *
+import os
 @route('/')
 def index():
     return """
@@ -15,4 +16,4 @@ def kaka():
     response.set_cookie("Hentai","Lover9000")
     return "kaka til <a href='/eyda'>eyða köku</a>"
 
-run()
+run(host='0.0.0.0', port=os.environ.get('PORT'))
